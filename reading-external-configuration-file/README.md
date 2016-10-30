@@ -12,3 +12,7 @@ It's very simple: Just add tags in pom.xml:
     </configuration>
   </plugin>
 ```
+
+
+After you make application deploy, put application.yml file in same folder of your .jar file and run application.
+The application going reading the file with the externals values.
