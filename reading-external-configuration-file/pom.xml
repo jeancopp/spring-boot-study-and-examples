@@ -4,17 +4,23 @@
 	<groupId>br.com.coppieters</groupId>
 	<artifactId>SpringBootExternalApplicationFile</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.1.RELEASE</version>
+	</parent>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>1.4.1.RELEASE</version>
 		</dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
-		<resources>	<resource>	<directory>src/main/resources</directory>	</resource>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
 		</resources>
 		<testSourceDirectory>src/test/java</testSourceDirectory>
 		<testResources>
