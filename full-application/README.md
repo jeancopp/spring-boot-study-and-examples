@@ -1,18 +1,5 @@
-# Reading external configuration file
+# Full application examples
 
-Think: After deploy, how can I read a external "application.properties" or "application.yml"?
+In this example, I tried to do a little CRUD application with Java 8, JPA/Hibernate, Thymeleaf, JQuery and bootstrap.
 
-It's very simple: Just add tags in pom.xml: 
-```xml
-  <plugin>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-maven-plugin</artifactId>
-    <configuration>
-      <layout>ZIP</layout>
-    </configuration>
-  </plugin>
-```
-
-
-After you make application deploy, put application.yml file in same folder of your .jar file and run application.
-The application going reading the file with the externals values.
+We have 4 layer, where one is on the client-side and other three are in the server-side.
