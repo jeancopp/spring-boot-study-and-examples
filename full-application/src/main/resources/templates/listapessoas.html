@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Sistema</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<div id="listaDePessoas">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>CPF/CNPJ</th>
+						<th>RG/IE</th>
+						<th>E-mail</th>
+					</tr>
+				</thead>
+				<tr th:each="pessoa : ${pessoas}">
+					<td><span th:text="${pessoa.nome}"></span></td>
+					<td><span th:text="${pessoa.cpf_cnpj}"></span></td>
+					<td><span th:text="${pessoa.rg_ie}"></span></td>
+					<td><span th:text="${pessoa.email}"></span></td>
+					<td>
+						<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button>
+						<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+
+		<hr />
+		<div id="cadatroDePessoas">
+			<form action="/salvar" method="post">
+				<div class="form-group">
+					<label for="nome">Nome</label> 
+					<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome"/>
+				</div>
+				<div class="form-group">
+					<label for="cpf_cnpj">CPF/CNPJ</label> 
+					<input type="text" class="form-control" id="cpf_cnpj" name="cpf_cnpj" placeholder="CPF/CNPJ"/>
+				</div>
+				<div class="form-group">
+					<label for="rg_ie">RG/IE</label> 
+					<input type="text" class="form-control" id="rg_ie" name="rg_ie" placeholder="RG/IE"/>
+				</div>
+				<div class="form-group">
+					<label for="email">E-mail</label> 
+					<input type="text" class="form-control" id="email" name="email" placeholder="E-mail"/>
+				</div>
+				
+				<button type="submit" class="btn-success">Convidar</button>
+			</form>
+		</div>
+	</div>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
